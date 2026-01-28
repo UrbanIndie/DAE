@@ -1,0 +1,29 @@
+body {
+   background-color: beige;
+}
+
+*/
+   h1 {
+   color: rgb(139, 145, 51); 
+   font-size: 2 px;
+   margin-bottom: 60 px;
+   margin-left: 1000 px;
+   margin-right: 10px; 
+}
+
+p {
+   font-size: 12px;
+   width: 60%;
+   background-color: rgb(194, 97, 28);
+   color: beige;
+   text-align: left;
+   line-height: 2;
+   margin: 60px 60px 60px 60px;
+   border-style: double;
+   font-family: "Times New Roman", serif;
+}
+
+
+img{
+   margin-left: 50px;
+}
