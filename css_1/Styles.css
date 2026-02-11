@@ -1,5 +1,6 @@
 body {
    background-color: beige;
+   font-family:  "Papyrus", "Impact", fantasy;
 }
 
 h1 {
@@ -34,7 +35,6 @@ p {
    margin: 20px 60px 60px 60px;
    padding: 40px 40px 40px 40px;
    border-style: double;
-   font-family: "Times New Roman", serif;
 }
 
 a {
