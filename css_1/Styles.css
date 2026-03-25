@@ -17,6 +17,12 @@ h2 {
    margin-left: 80px;
 }
 
+div {
+   color: rgb(139, 145, 51);
+   margin-top: 20px;
+   margin-left: 100px;
+}
+
 li {
    color: rgb(139, 145, 51);
    margin-left: 80px;
@@ -44,7 +50,7 @@ a {
 }
 
 button {
-   color:beige;
+   color:rgb(245, 245, 220);
    background-color: rgb(139, 145, 51);
    font-family:  "Papyrus", "Impact", fantasy;
    margin-left: 1200px;
