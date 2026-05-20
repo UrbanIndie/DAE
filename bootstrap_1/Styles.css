@@ -1,4 +1,5 @@
-head {
+html {
+    scroll-behavior: smooth;
 }
 
 body {
