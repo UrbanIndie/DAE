@@ -1,79 +1,182 @@
-html {
-    scroll-behavior: smooth;
-}
-
+html,
 body {
-   background-color: beige;
-   font-family:  "Papyrus", "Impact", fantasy;
+  background-color: beige !important;
+   font-family:  "Papyrus", "Impact", fantasy !important;
+  color: beige;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
-h1 {
-   color: rgb(139, 145, 51);
-   margin-top: 40px;
-   margin-bottom: 40px;
-   margin-left: 40px;
+.navbar {
+  background-color: rgb(139, 145, 51);
+  padding: 14px 0;
+  box-shadow: 0 2px 10px rgb(139, 145, 51);
 }
 
-h2 {
-   color: rgb(139, 145, 51);
-   margin-top: 20px;
-   margin-bottom: 10px;
-   margin-left: 80px;
+.nav-beige {
+  background-color: beige;
+  padding: 4px 12px;
+  border-radius: 8px;
 }
 
-div {
-   color: rgb(139, 145, 51);
-   margin-top: 20px;
-   margin-left: 100px;
+.navbar-brand {
+  font-size: 1.4rem;
+  color: rgb(139, 145, 51)!important;
+  margin: 0 10px;
+  letter-spacing: 1px;
 }
 
-li {
-   color: rgb(139, 145, 51);
-   margin-left: 80px;
+.nav-link {
+  color: rgb(139, 145, 51)!important;
+  margin: 0 10px;
+  transition: 0.3s;
+  font-size: 0.95rem;
 }
 
-p {
-   font-size: 18 px;
-   background-color: rgb(194, 97, 28);
-   color: beige;
-   text-align: left;
-   line-height: 2;
-   margin-top: 40px;
-   margin-bottom: 40px;
-   margin-left: 80px;
-   margin-right: 80px;
-   padding: 40px 40px 40px 40px;
-   border-style: double;
+.nav-link:hover {
+  color: rgb(76, 80, 19)!important;
 }
 
-a {
-   color:rgb(194, 97, 28);
-   margin-left: 60px;
-   margin-top: 40px;
-   margin-bottom: 40px;
+header {
+  text-align: center;
+  padding: 80px 20px 40px;
 }
 
-button {
-   color:rgb(245, 245, 220);
-   background-color: rgb(139, 145, 51);
-   font-family:  "Papyrus", "Impact", fantasy;
-   margin-left: 1200px;
-   margin-top: 40px;
-   margin-bottom: 40px;
-   padding: 12px 20px 6px 22px;
-   border-style: double;
-   border-color: beige;
+header h1 {
+  font-size: 3rem;
+  color: rgb(139, 145, 51) !important;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#js,
+#you {
+  color: #b86128;
+  font-weight: 500;
+}
+
+header a {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: beige !important;
+  background: #b86128 !important;
+  padding: 12px 24px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+header a:hover {
+  background: #924a1b !important;
 }
 
 img {
-   margin-left: 80px;
-   height: 400px;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+  border-radius: 18px;
+}
+
+section {
+  margin: 50px 0;
+}
+
+.col-md-6 {
+  margin-bottom: 30px;
+}
+
+h1,
+h2 {
+  color: rgb(139, 145, 51) !important;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+p,
+ul,
+ol {
+  background: #b86128;
+  color: beige;
+  padding: 25px;
+  border: beige;
+  border-style: double;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+p {
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+ul,
+ol {
+  padding-left: 40px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+#recipes + a,
+#recipes ~ a {
+  display: block;
+  text-decoration: none;
+  background: beige;
+  margin: 12px 0;
+  padding: 15px 20px;
+  border-radius: 16px;
+  color: #b86128;
+  font-weight: 600;
+  transition: 0.3s;
+  box-shadow: 0 3px 10px rgb(213, 213, 170) !important;;
+}
+
+#recipes + a:hover,
+#recipes ~ a:hover {
+  transform: translateY(-3px);
+  background: rgb(213, 213, 170) !important;
+}
+
+button {
+  display: block;
+  margin: 40px auto;
+  padding: 14px 32px;
+  border: none;
+  background: rgb(139, 145, 51) !important;;
+  color: beige;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: rgb(139, 145, 51) !important;
+  transform: scale(1.05);
 }
 
 footer {
-   background-color: rgb(194, 97, 28);
-   margin: 20px 20px 20px 20px;
-   padding: 8px 4px 8px 4px;
-   color: beige;
-   text-align: center;
+  background: #b86128;
+  color: beige;
+  text-align: center;
+  padding: 25px;
+  margin-top: 60px;
 }
+
+@media (max-width: 768px) {
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .navbar-nav {
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  img {
+    border-radius: 10px;
+  }
+}
+
