@@ -5,7 +5,7 @@ herbal = 0
 
 name = input ("I heard you want tea, so tell me, what's your name?: ")
 print ()
-print ("So you're name is", str(name) + ".")
+print ("So your name is", str(name) + ".")
 print ()
 print ("I'm going to ask you a series of questions to find out what kind of tea you like. Answer with 'Y' or 'N'.")
 print ()
@@ -28,8 +28,7 @@ if q2 == "Y":
     herbal += 1
 elif q2 == "N":
     oolong += 1
-
-if q2 != "Y" or q2 != "N":
+else:
     print ("Please answer with 'Y' or 'N'.")
 print ()
 
@@ -39,8 +38,7 @@ if q3 == "Y":
     green += 1
 elif q3 == "N":
     herbal += 1
-
-if q3 != "Y" or q3 != "N":
+else:
     print ("Please answer with 'Y' or 'N'.")
 print ()
 
@@ -50,8 +48,7 @@ if q4 == "Y":
     white += 1
 elif q4 == "N":
     green += 1
-
-if q4 != "Y" or q4 != "N":
+else:
     print ("Please answer with 'Y' or 'N'.")
 print ()
 
@@ -61,8 +58,7 @@ if q5 == "Y":
     green += 1
 elif q5 == "N":
     oolong += 1
-
-if q5 != "Y" or q5 != "N":
+else:
     print ("Please answer with 'Y' or 'N'.")
 print ()
 
@@ -72,17 +68,15 @@ if q6 == "Y":
     oolong += 1
 elif q6 == "N":
     herbal += 1
-
-if q6 != "Y" or q6 != "N":
+else:
     print ("Please answer with 'Y' or 'N'.")
 print ()
 
-# print ("Oolong:", oolong)
-# print ("Green:", green)
-# print ("White:", white)
-# print ("Herbal:", herbal)
+def order (oolong, green, white, herbal):
+    pref = max (oolong, green, white, herbal)
+    return pref
 
-pref = max(oolong, green, white, herbal)
+pref = order (oolong, green, white, herbal)
 
 if pref == oolong:
     pref = "oolong tea"
@@ -101,17 +95,41 @@ print ("Based on your answers, you must like", pref + ".")
 print ()
 print (pers)
 print ()
+
 # sweetness
 sweetness = input ("Do you like your tea sweet? (Y/N): ")
-if sweetness == "Y":
-    print ("So you'resweet?")
-    numsweet = input ("How sweet do you like your tea? (1-10): ")
-elif sweetness == "N":
-    print ("So you're bitter? (Nothing wrong with that, I like my tea bitter too.)")
-if sweetness != "Y" or sweetness != "N":
-    print ("You're not getting anything. Please answer with 'Y' or 'N'.")
+
 print ()
 
-print ("You'd like your", pref, "to have", numsweet, "sugar cubes.")
+if sweetness == "Y":
+    print ("So you're sweet?")
+    print ()
+    numsweet = int (input("How sweet do you like your tea? (1-10): "))
+    # exception
+    print ()
+    startcube = 1
+    while startcube <= numsweet:
+        print ("Adding", startcube, "sugar cube")
+        startcube += 1
+        if startcube > numsweet:
+            print ("All sugar cubes added!")
+            print ("You'd like your", pref, "to have", numsweet, "sugar cubes.")
+            print ()
+            break
+elif sweetness == "N":
+    numsweet = 0
+    print ("So you're bitter? (Nothing wrong with that, I like my tea bitter too.)")
+    print ()
+    print ("You'd like your", pref, "to have", numsweet, "sugar cubes.")
+    print ()
+else:
+    print ("You're not getting anything! Please answer with 'Y' or 'N'.")
+    print ()
 
-print ("Thank you for taking the tea preference quiz, " + name + ". I hope you like your tea!")
+for i in range (1):
+    print ("Thank you for taking the tea preference quiz, " + name + ". I hope you like your tea!")
+
+print ()
+
+
+
