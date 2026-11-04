@@ -10,6 +10,18 @@ print ()
 print ("I'm going to ask you a series of questions to find out what kind of tea you like. Answer with 'Y' or 'N'.")
 print ()
 
+tea = ["oolong", "green", "white", "herbal"]
+print ("Your options of tea are", tea[0] + ",", tea[1] + ",", tea[2] + ",", "and", tea[3] + ".")\
+
+print ()
+
+list = 1
+for i in tea:
+    print (str(list) + ". You can get", i + ".")
+    list += 1
+    
+print ()
+
 # question 1
 
 q1 = input ("1. Do you prefer a slow and quiet morning over a fast and lively routine? (Y/N): ")
@@ -17,13 +29,12 @@ if q1 == "Y":
     white += 1
 elif q1 == "N":
     herbal += 1
-
-if q1 != "Y" or q1 != "N":
+else:
     print ("Please answer with 'Y' or 'N'.")
 print ()
 
 # question 2
-q2 = input ("Do you like going with the flow over following a strict plan? (Y/N): ")
+q2 = input ("2. Do you like going with the flow over following a strict plan? (Y/N): ")
 if q2 == "Y":
     herbal += 1
 elif q2 == "N":
@@ -43,7 +54,7 @@ else:
 print ()
 
 # question 4
-q4 = input ("When you are stressed, do you like to unplug completely rather than venting to others? (Y/N): ")
+q4 = input ("4. When you are stressed, do you like to unplug completely rather than venting to others? (Y/N): ")
 if q4 == "Y":
     white += 1
 elif q4 == "N":
@@ -53,7 +64,7 @@ else:
 print ()
 
 # question 5
-q5 = input ("Do you consider yourself more of a night owl than a morning lark? (Y/N): ")
+q5 = input ("5. Do you consider yourself more of a night owl than a morning lark? (Y/N): ")
 if q5 == "Y":
     green += 1
 elif q5 == "N":
@@ -63,7 +74,7 @@ else:
 print ()
 
 # question 6
-q6 = input ("Do you like solving and analyzing complex problems? (Y/N): ")
+q6 = input ("6. Do you like solving and analyzing complex problems? (Y/N): ")
 if q6 == "Y":
     oolong += 1
 elif q6 == "N":
@@ -131,5 +142,15 @@ for i in range (1):
 
 print ()
 
+def main():
+    try:
+        with open("Names.txt", "r") as readfrom:
+            line = readfrom.readline()
+            while line != "":
+                print(line.strip())
+                line = readfrom.readline()
 
+    except FileNotFoundError:
+        print("Error: Names.txt could not be found. Please make sure the file exists.")
 
+main()
