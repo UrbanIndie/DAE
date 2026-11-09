@@ -120,7 +120,6 @@ if sweetness == "Y":
     print ("You can have a maximum of", maxsweet, "sugar cubes.")
     print ()
     numsweet = int (input("How sweet do you like your tea? (1-10): "))
-    # exception
     print ()
     startcube = 1
     while startcube <= numsweet:
