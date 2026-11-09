@@ -23,7 +23,6 @@ for i in tea:
 print ()
 
 # question 1
-
 q1 = input ("1. Do you prefer a slow and quiet morning over a fast and lively routine? (Y/N): ")
 if q1 == "Y":
     white += 1
@@ -115,6 +114,11 @@ print ()
 if sweetness == "Y":
     print ("So you're sweet?")
     print ()
+    
+    # constant variable (uncaptialized)
+    maxsweet = 10
+    print ("You can have a maximum of", maxsweet, "sugar cubes.")
+    print ()
     numsweet = int (input("How sweet do you like your tea? (1-10): "))
     # exception
     print ()
@@ -144,13 +148,22 @@ print ()
 
 def main():
     try:
-        with open("Names.txt", "r") as readfrom:
+        with open("Output.txt", "r") as readfrom:
             line = readfrom.readline()
             while line != "":
-                print(line.strip())
+                print (line.strip())
                 line = readfrom.readline()
+                print ()
+        with open("Names.txt", "w") as file:
+            file.write(name + " prefers " + pref + ".\n")
 
     except FileNotFoundError:
         print("Error: Names.txt could not be found. Please make sure the file exists.")
+
+    else:
+        print("Files were processed successfully.")
+
+    finally:
+        print("Program execution completed.")
 
 main()
