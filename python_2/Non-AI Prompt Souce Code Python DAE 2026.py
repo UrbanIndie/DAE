@@ -126,13 +126,15 @@ if sweetness == "Y":
         print ("Adding", startcube, "sugar cube")
         startcube += 1
         if startcube > numsweet:
+            print ()
             print ("All sugar cubes added!")
+            print ()
             print ("You'd like your", pref, "to have", numsweet, "sugar cubes.")
             print ()
             break
 elif sweetness == "N":
     numsweet = 0
-    print ("So you're bitter? (Nothing wrong with that, I like my tea bitter too.)")
+    print ("So you're bitter? (Nothing wrong with that, I like my tea bitter too).")
     print ()
     print ("You'd like your", pref, "to have", numsweet, "sugar cubes.")
     print ()
@@ -147,22 +149,20 @@ print ()
 
 def main():
     try:
-        with open("Output.txt", "r") as readfrom:
-            line = readfrom.readline()
-            while line != "":
-                print (line.strip())
-                line = readfrom.readline()
-                print ()
-        with open("Names.txt", "w") as file:
+        with open("DAE/python_2/Names.txt", "w") as file:
             file.write(name + " prefers " + pref + ".\n")
 
-    except FileNotFoundError:
-        print("Error: Names.txt could not be found. Please make sure the file exists.")
+    except Exception as error:
+        print("Writing error as", error)
 
-    else:
-        print("Files were processed successfully.")
+    try:
+        with open("DAE/python_2/Output.txt", "r") as readfrom:
+            line = readfrom.read()
+            print(line)
 
-    finally:
-        print("Program execution completed.")
+    except Exception as error:
+        print("Reading error as", error)
 
 main()
+
+print ()
